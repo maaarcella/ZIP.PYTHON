@@ -1,0 +1,34 @@
+import os 
+usuario = []
+email = []
+senha = []
+
+while (True):
+    print("-------------------------CADASTRO DE USUÁRIOS-----------------------------")
+    print("Digite 1 para cadastrar")
+    print("digite 2 para listar os usuários")
+    print("Digite 3 para finalizar")
+    inf = int(input("Selecione a opção:  "))
+
+    print("--------------------------------------------------------------------------")
+
+
+    if (inf == 1):
+        u = input("Qual o nome do usuário: ")
+        usuario.append(u)
+        e = input("Qual o seu email: ")
+        email.append(e)
+        s = input("Qual sua senha: ")
+        senha.append(s)
+
+    elif (inf == 2 ):
+        for u, e, s in zip(usuario, email, senha):
+            print("------------------------------------------------------------------")
+            print("O usuário é: ", u)
+            print("O email do usuário é: ", e)
+            print("A senha do usuário é: ", s)
+            print("------------------------------------------------------------------")
+
+    elif (inf == 3):
+        print("programa finalizado")
+        break
